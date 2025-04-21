@@ -10,6 +10,8 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,11 +22,13 @@ class MyApp extends StatelessWidget {
 }
 
 class UserPage extends StatefulWidget {
+  const UserPage({super.key});
+
   @override
-  _UserPageState createState() => _UserPageState();
+  UserPageState createState() => UserPageState();
 }
 
-class _UserPageState extends State<UserPage> {
+class UserPageState extends State<UserPage> {
   final Box _userBox = Hive.box('users');
 
   final TextEditingController _nomeController = TextEditingController();
